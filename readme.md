@@ -55,7 +55,7 @@ To protect user data, we've implemented the following security measures:
 7.Installation
 ---------------
 To run the project, follow these steps:
-1. Clone the repository from - 
+1. Clone the repository from - https://github.com/hedge-hog-23/techthon_prelims/tree/main
 2. Navigate to the project directory.
 3. Create the sample database as shown in db.txt.
 4. Run `npm install` to install dependencies.
