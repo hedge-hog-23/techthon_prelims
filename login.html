@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel = "stylesheet" href ="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form" method = "post" action = "signin.php">
+            <div class="form-group">
+                <label for="username">Username(your mail id)</label>
+                <input type="text" id="username" name="username">
+                <p class="error" id="error-message-name"></p>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <p class="error" id="error-message-pass"></p>
+            </div>
+            <div class="button-container">
+                <button class="login-button" type="submit" id="login-button" disabled>Login</button>
+            </div><br>
+            <a href = "forgotpassword.html">forgot password??</a>
+            <a href = "signup.html" style = "float:right">new user??</a>
+        </form>
+    </div>
+
+    <script>
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const loginButton = document.getElementById('login-button');
+        const errorMessagename = document.getElementById('error-message-name');
+        const errorMessagepass = document.getElementById('error-message-pass');
+
+        usernameInput.addEventListener('keyup', validateForm);
+        passwordInput.addEventListener('keyup', validateForm);
+        loginButton.addEventListener('click', function(event) {
+            validateForm();
+            if (!isFormValid()) {
+                event.preventDefault();
+            }
+        });
+
+        function validateForm() {
+            const username = usernameInput.value;
+            const password = passwordInput.value;
+
+            if (username === "") {
+                errorMessagename.textContent = "Username can't be empty!";
+            } else {
+                errorMessagename.textContent = "";
+            }
+
+            if (password === "") {
+                errorMessagepass.textContent = "Password can't be empty!";
+            } else {
+                errorMessagepass.textContent = "";
+            }
+            if (password.length < 8) {
+                errorMessagepass.textContent = "Password must be min 6 characters!";
+            } else {
+                errorMessagepass.textContent = "";
+            }
+            if (username !== "" && password !== "") {
+                loginButton.classList.add('enabled');
+                loginButton.removeAttribute('disabled');
+            } else {
+                loginButton.classList.remove('enabled');
+                loginButton.setAttribute('disabled', 'disabled');
+            }
+        }
+
+        function isFormValid() {
+            return usernameInput.value !== "" && passwordInput.value !== "";
+        }
+    </script>
+    
+</body>
+</html>
