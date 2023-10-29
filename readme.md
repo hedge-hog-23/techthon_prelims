@@ -7,7 +7,7 @@
 2.Technology Stack<br>
 3.Project Structure<br>
 4.Functionality<br>
-5.User Experience(Screenshots)<br>
+5.User Experience<br>
 6.Security<br>
 7.Installation<br>
 8.Usability<br>
@@ -28,7 +28,7 @@ Welcome to our User Registration System.This system provides a secure and user-f
 Our User Registration System offers the following features: <br>
 1.Login Page:Users can log in using their email and password. <br>
 2.Signup Page:New users can create an account by providing their name, email, and password. <br>
-3.Forgot Password:Users can reset their password by receiving a reset link through email. 
+3.Forgot Password:Users can reset their password by receiving a reset code via mail. 
 
 # 5.User Experience (Screenshots)
 We've designed a user-friendly and responsive interface for easy navigation. <br>
@@ -37,6 +37,7 @@ We've designed a user-friendly and responsive interface for easy navigation. <br
 To protect user data, we've implemented the following security measures: <br>
 -> Passwords are securely hashed. <br>
 -> Data transmission is secured with HTTPS. <br>
+-> Sent mails via TLS system
 -> We've implemented measures to prevent common web security vulnerabilities. <br>
 
 # 7.Installation
