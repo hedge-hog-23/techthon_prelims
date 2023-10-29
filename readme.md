@@ -55,5 +55,5 @@ https://drive.google.com/file/d/1ZGPjO_nxcIUQ4VNXnsZLSzaBBC5fWNq3/view?usp=shari
 
 # 10. Database Schema
 
-The database schema is available in the TXT FILE NAME file in the repository. <br>
+The database schema is available in the db.txt file in the repository. <br>
 Thank you for reviewing our User Registration System.
