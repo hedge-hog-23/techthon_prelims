@@ -1,0 +1,8 @@
+DATABASE-techathon
+  --------------
+TABLE NAME:userdetails
+  
+1.Sno-int(11)
+2.USERNAME-varchar(200)
+3.PASSWORD1-varchar(200)
+4.OTP-varchar(6)
